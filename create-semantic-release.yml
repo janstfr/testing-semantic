@@ -1,0 +1,55 @@
+name: Create Semantic Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read # for checkout
+
+env:
+  IS_AUTOMATED_COMMIT: true
+  HUSKY: 0
+
+jobs:
+  release:
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ssh-key: '${{secrets.RELEASE_TOKEN}}'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build & test
+        run: yarn prepack
+
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+        run: npm audit signatures
+
+      - name: Create release
+        env:
+          # In order to trigger the `publish package` workflow
+          # the GITHUB_TOKEN needs to be a custom SSH keypair instead of the
+          # automatic created GITHUB_TOKEN.
+          # https://stackoverflow.com/a/69063453/5214746 && https://stackoverflow.com/a/75578028
+          GITHUB_TOKEN: '${{secrets.RELEASE_TOKEN}}'
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn semantic-release
