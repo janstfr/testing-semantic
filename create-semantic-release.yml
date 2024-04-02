@@ -45,11 +45,4 @@ jobs:
         run: npm audit signatures
 
       - name: Create release
-        env:
-          # In order to trigger the `publish package` workflow
-          # the GITHUB_TOKEN needs to be a custom SSH keypair instead of the
-          # automatic created GITHUB_TOKEN.
-          # https://stackoverflow.com/a/69063453/5214746 && https://stackoverflow.com/a/75578028
-          GITHUB_TOKEN: ${{secrets.RELEASE_TOKEN}}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn semantic-release
