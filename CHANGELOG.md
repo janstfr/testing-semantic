@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/janstfr/testing-semantic/compare/v1.1.1...v2.0.0) (2024-04-03)
+
+
+### Features
+
+* big feature ([328db57](https://github.com/janstfr/testing-semantic/commit/328db578266d1fa7b17383850ca4d30b9646a44c))
+
+
+### BREAKING CHANGES
+
+* wow thats big
+
 ## [1.1.1](https://github.com/janstfr/testing-semantic/compare/v1.1.0...v1.1.1) (2024-04-03)
 
 
