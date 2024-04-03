@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/janstfr/testing-semantic/compare/v1.1.0...v1.1.1) (2024-04-03)
+
+
+### Bug Fixes
+
+* string ([80d6037](https://github.com/janstfr/testing-semantic/commit/80d60378c3c1bffee268f63bc3c1cfd80d9c2165))
+
 # [1.1.0](https://github.com/janstfr/testing-semantic/compare/v1.0.0...v1.1.0) (2024-04-03)
 
 
