@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/janstfr/testing-semantic/compare/v4.0.0...v5.0.0) (2024-04-03)
+
+
+### Features
+
+* last test ([fb65b51](https://github.com/janstfr/testing-semantic/commit/fb65b51574981d1aa5f82acf98218c8c96d8d2e0))
+
+
+### BREAKING CHANGES
+
+* if this works we dont need a PAT
+
 # [4.0.0](https://github.com/janstfr/testing-semantic/compare/v3.0.0...v4.0.0) (2024-04-03)
 
 
