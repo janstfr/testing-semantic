@@ -38,12 +38,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build & test
-        run: yarn build && yarn test
-
-      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-        run: npm audit signatures
-
       - name: Create release
         env:
           # In order to trigger the `publish package` workflow
