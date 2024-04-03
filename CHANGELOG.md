@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/janstfr/testing-semantic/compare/v2.0.0...v3.0.0) (2024-04-03)
+
+
+### Features
+
+* use ssh token ([c2ef341](https://github.com/janstfr/testing-semantic/commit/c2ef341fdbc15efd07ba29eaff2482b56e82663b))
+
+
+### BREAKING CHANGES
+
+* use ssh token instead of PAT
+
 # [2.0.0](https://github.com/janstfr/testing-semantic/compare/v1.1.1...v2.0.0) (2024-04-03)
 
 
