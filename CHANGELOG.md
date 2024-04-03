@@ -1,3 +1,15 @@
+# [6.0.0](https://github.com/janstfr/testing-semantic/compare/v5.0.0...v6.0.0) (2024-04-03)
+
+
+### Features
+
+* no id ([9671c0e](https://github.com/janstfr/testing-semantic/commit/9671c0e29580d4b689964417460806103aa779cf))
+
+
+### BREAKING CHANGES
+
+* no id
+
 # [5.0.0](https://github.com/janstfr/testing-semantic/compare/v4.0.0...v5.0.0) (2024-04-03)
 
 
