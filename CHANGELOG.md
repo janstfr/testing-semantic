@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/janstfr/testing-semantic/compare/v1.0.0...v1.1.0) (2024-04-03)
+
+
+### Features
+
+* ssh ([9fa1bf5](https://github.com/janstfr/testing-semantic/commit/9fa1bf5b2401d5a7c753b284b5c13db7d2ff6bb7))
+
 # 1.0.0 (2024-04-03)
 
 
