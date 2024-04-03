@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/janstfr/testing-semantic/compare/v3.0.0...v4.0.0) (2024-04-03)
+
+
+### Features
+
+* use github token no ssh ([390ccfa](https://github.com/janstfr/testing-semantic/commit/390ccfa3d5455884a575ca44d165c0df7d649c1f))
+
+
+### BREAKING CHANGES
+
+* use github token no ssh
+
 # [3.0.0](https://github.com/janstfr/testing-semantic/compare/v2.0.0...v3.0.0) (2024-04-03)
 
 
