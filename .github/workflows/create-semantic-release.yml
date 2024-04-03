@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ssh-key: ${{ secrets.RELEASE_KEY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -40,10 +40,6 @@ jobs:
 
       - name: Create release
         env:
-          # In order to trigger the `publish package` workflow
-          # the GITHUB_TOKEN needs to be a custom PAT token instead of the
-          # automatic created GITHUB_TOKEN.
-          # https://stackoverflow.com/a/69063453/5214746
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn semantic-release
