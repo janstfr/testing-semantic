@@ -39,7 +39,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build & test
-        run: yarn prepack
+        run: yarn build && yarn test
 
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
